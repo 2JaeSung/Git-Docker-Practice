@@ -78,7 +78,7 @@ Docker:
 
 4) 이미지 상세 정보 확인(docker image inspect)
 구문. docker image inspect 이미지명:태그명
-- 이미지 ID, 작성일, docker 버전, CPU 아키텍처 등이 표시됨
+// 이미지 ID, 작성일, docker 버전, CPU 아키텍처 등이 표시됨
 
 5) 이미지 태그 설정(docker image tag)
 구문. docker image tag <Docker Hub 사용자명>/이미지명:태그명
