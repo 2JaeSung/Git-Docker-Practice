@@ -1,5 +1,6 @@
 # git 내용 정리
 
+## 2 Git의 기초
 
 ### 2.1 Git 저장소 만들기
 다음 두가지 방법으로 Git 저장소 사용 가능
@@ -31,11 +32,11 @@
 - 리모트 저장소 삭제하기 (git remote rm)
 
 ### 2.6 태그
-- 
+- 태그 조회하기, 생성하기
+- 태크 종류 (lightweight, annotated)
 
 ### 2.7 Git Alias
-
-dsfsdfdf
+- config 사용하여 각 명령의 alias 쉽게 만들 수 있다.
 
 
 
