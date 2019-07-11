@@ -217,11 +217,57 @@
 ## 4 Docker 명령
 
 ### 4.1 Docker 이미지 조작
-- 
+- 도커 허브
+  - 도커의 공식 리포지토리 서비스 (이미지 배포나 다운로드 가능)
+
+- 이미지 다운로드 (docker image pull)
+- 이미지 목록 표시 (docker image ls)
+- 이미지 상세 정보 확인 (docker image inspect)
+  - 이미지 ID, 작성일, 도커 버전, CPU 아키텍쳐 표시
+- 이미지 태그 설정 (docker image tag)
+- 이미지 검색 및 삭제 (docker search & dockeer image rm)
+- 이미지 업로드 (docker image push)
+
 ### 4.2 Docker 컨테이너 생성/시작/정지
+- 컨테이너 생성 및 시작 (docker container run ***콘솔에 결과를 출력하는 옵션, 컨테이너명, 이미지명, 컨테이너에서 실행한 명령***)
+- 컨테이너 백그라운드 실행 (docker container run ***실행 옵션, 이미지명, 인수***)
+  - 컨테이너 로그를 통해서 실행되고 있는지 확인 가능 (restart를 통해 재시작 조건 설정 가능)
+- 컨테이너 네트워크 설정 (docker container run ***네트워크 옵션, 이미지명, 인수***)
+- 자원 지정하여 컨테이너 생성 및 실행(docker container run ***자원 옵션, 이미지명, 인수***)
+  - CPU 시간의 상대 비율과 메모리 설정 등
+- 가동 컨테이너 목록 표시 (docker container ls ***옵션***)
+- 컨테이너 가동 확인 (docker container stats ***컨테이너 식별자***)
+- 컨테이너 시작 (docker container start ***옵션, 컨테이너 식별자***)
+- 컨테이너 정지 (docker container stop)
+- 컨테이너 재시작 (docker container restart)
+- 컨테이너 삭제 (docker container rm)
+- 컨테이너 중단/재개 (docker container pause/docker container unpause)
+
 ### 4.3 Docker 컨테이너 네트워크
+- 네트워크 목록 표시 (docker network ls)
+  - 옵션으로 ID, 네트워크 타입 등의 정보 확인 가능
+- 네트워크 작성 (docker network create)
+  - 지정할 수 있는 네트워크 드라이버는 'bridge' 또는 'overlay'
+- 네트워크 연결 (docker network connect/docker network disconnect)
+- 네트워크 상세 정보 확인 (docker network inspect)
+- 네트워크 삭제 (docker network rm)
+
 ### 4.4 가동 중인 Docker 컨테이너 조작
+- 가동 컨테이너 연결 (docker container attach)
+- 가동 컨테이너에서 프로세스 실행 (docker container exec)
+- 가동 컨테이너의 프로세스 확인 (docker container top)
+- 가동 컨테이너의 포트 전송 확인 (docker container port)
+- 컨테이너의 이름 변경 (docker container rename)
+- 컨테이너 안의 파일을 복사 (docker container cp ***컨테이너 식별자 : 컨테이너 안의 파일 경로, 호스트의 디렉토리 경로***)
+- 컨테이너 조작의 차분 확인 (docker container diff)
+
 ### 4.5 Docker 이미지 생성
+- 컨테이너로부터 이미지 작성 (docker container commit ***옵션, 컨테이너 식별자, 이미지명***)
+- 컨테이너를 tar 파일로 출력 (docker container export)
+- tar 파일로부터 이미지 작성 (docker image import ***파일 또는 URL | - 이미지명***)
+- 이미지 저장 (docker image save)
+- 이미지 읽어 들이기 (docker image load)
+- 불필요한 이미지/컨테이너를 일괄 삭제 (docker system prune)
 
 ## 5 Dockerfile을 사용한 코드에 의한 서버 구축
 ### 5.1 Dockerfile을 사용한 구성 관리
